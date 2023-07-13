@@ -14,7 +14,6 @@
                 </svg>
             </div>
             <div :class="panel_active ? 'container right-panel-active' : 'container'" ref="login_in_up">
-
                 <div class="form-container sign-up-container">
                     <form>
                         <h1>医师注册</h1>
@@ -40,11 +39,11 @@
                         <div class="txtb">
                             <input type="password" placeholder="再次确认密码">
                         </div>
-                        <button @click="signup">注册</button>
+                        <button @click="signup" type='button'>注册</button>
                     </form>
                 </div>
                 <div class="form-container sign-in-container">
-                    <form action="#">
+                    <form>
                         <h1>医师登录</h1>
                         <div class="txtb">
                             <input type="text" placeholder="邮箱" v-model="signInMsg.email">
@@ -53,7 +52,7 @@
                             <input type="password" placeholder="密码" v-model="signInMsg.password">
                         </div>
                         <a href="#">忘记密码？</a>
-                        <button @click="signin">登录</button>
+                        <button @click="signin" type='button'>登录</button>
                     </form>
                 </div>
                 <div class="overlay-container">
@@ -80,6 +79,7 @@ import { computed, reactive, ref } from 'vue'
 import { user, mail } from '../../utils/api'
 import { useIntervalFn } from '@vueuse/core'
 import { useInitStore } from '../../store/init.js'
+import { configProviderProps } from 'element-plus'
 
 const init = useInitStore()
 const { returnIndex } = init
@@ -139,6 +139,8 @@ const signup = () => {
 
 const signin = () => {
     login(signInMsg)
+   
+
    
 }
 //控制是否有这个属性

@@ -8,3 +8,4 @@ export default function request({ method = "get", url = '', data = {}, params = 
         params
     })
 }
+//accept=".nii, .nii.gz"  :before-upload="beforeUpload"

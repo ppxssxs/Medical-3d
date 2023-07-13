@@ -41,7 +41,7 @@ async function show() {
     //   }
     // })
     console.log(url)
-    const nvImage = await NVImage.loadFromUrl({ url: "https://niivue.github.io/niivue-demo、-images/mni152.nii.gz" })
+    const nvImage = await NVImage.loadFromUrl({ url: "https://niivue.github.io/niivue-demo-images/mni152.nii.gz" })
     //const nvImage = await NVImage.loadFromFile({ file: file[0].raw })
     await nv.addVolume(nvImage)
     nvImgId.value = nvImage.id

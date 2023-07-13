@@ -10,7 +10,7 @@ export const useInitStore = defineStore("init", () => {
     function returnIndex() {
         currentIndex.value = -1
         sessionStorage.setItem('currentIndex', currentIndex)
-        $router.push('/')
+        $router.push({path:'/'})
     }
     return {
         currentIndex,

@@ -3,7 +3,7 @@ import index from './components/index/index.vue'
 import { onMounted } from 'vue';
 
 onMounted(()=>{
-  sessionStorage.setItem('token',666)
+  
 })
 
 

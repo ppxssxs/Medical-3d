@@ -48,9 +48,9 @@
       </el-aside>
       <el-main style="padding: 0; width: 96.5%; height: 100vh;">
         <medicalView />
-        <keep-alive>
-          <router-view></router-view>
-        </keep-alive>
+
+        <router-view></router-view>
+
       </el-main>
     </el-container>
   </div>
@@ -94,7 +94,6 @@ const items = [
   //             fill="#cdcdcd" p-id="7612"></path>
   //         </svg>`,
   //   name: 'view'
-
   // },
   {
     html: ` <svg  t="1685175213167" class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -114,13 +113,12 @@ const items = [
   }
 ]
 
-let {currentIndex} = storeToRefs(init) 
+let { currentIndex } = storeToRefs(init)
 currentIndex.value = sessionStorage.getItem('currentIndex') || -1
 
 const clickDiv = (index, name) => {
   currentIndex.value = index
   sessionStorage.setItem('currentIndex', index)
- 
   $router.push({ name: name })
 }
 
